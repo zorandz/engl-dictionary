@@ -1,153 +1,141 @@
 .global-container {
-    display: grid;
-    width: 60%;
-    margin: auto;
-    margin: 1.5rem auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: 15vh 85vh;
-    grid-template-areas: 
-        "input-container"
-        "result-container";
-
+  display: grid;
+  width: 60%;
+  margin: auto;
+  margin: 1.5rem auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15vh 85vh;
+  grid-template-areas: "input-container" "result-container";
 }
 
 @font-face {
-  font-family: 'Inconsolata-Bold';
-  src: url('/code/assets/fonts/inconsolata/static/Inconsolata-Bold.ttf');
+  font-family: "Inconsolata-Bold";
+  src: url("/code/assets/fonts/inconsolata/static/Inconsolata-Bold.ttf");
 }
-
 @font-face {
-  font-family: 'Inter-Regular';
-  src: url('/code/assets/fonts/inter/static/Inter-Regular.ttf');
+  font-family: "Inter-Regular";
+  src: url("/code/assets/fonts/inter/static/Inter-Regular.ttf");
 }
-
 @font-face {
-  font-family: 'Lora-BoldItalic';
-  src: url('/code/assets/fonts/lora/static/Lora-BoldItalic.ttf');
+  font-family: "Lora-BoldItalic";
+  src: url("/code/assets/fonts/lora/static/Lora-BoldItalic.ttf");
 }
-
 @font-face {
-  font-family: 'Lora-Regular';
-  src: url('/code/assets/fonts/lora/static/Lora-Regular.ttf');
+  font-family: "Lora-Regular";
+  src: url("/code/assets/fonts/lora/static/Lora-Regular.ttf");
 }
-
 .input-container {
-    grid-area: 0 / 0 / 1 / 1;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+  grid-area: 0/0/1/1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .result-container {
-    height: 100%;
-    grid-area: 1 / 0 / 2 / 1;
-    display: flex;
-    flex-direction: column;
+  height: 100%;
+  grid-area: 1/0/2/1;
+  display: flex;
+  flex-direction: column;
 }
 
 /*grid-area: row-start col-start row-end col-end; */
-
 /* The switch - the box around the slider */
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 2rem;
-    margin: 0.5rem 0.7rem;
-    height: 1rem;
-  }
+  position: relative;
+  display: inline-block;
+  width: 2rem;
+  margin: 0.5rem 0.7rem;
+  height: 1rem;
+}
 
-  .logo {
-    width: 1.5rem;
-    cursor: pointer;
-  }
+.logo {
+  width: 1.5rem;
+  cursor: pointer;
+}
 
-  .vertical-line {
-    transform: rotate(90deg);
-    width: 1rem;
-    height: 1px;
-    margin-top: 0.9rem;
-    margin-left: 0.3rem;
-    background-color: rgb(230, 222, 222);
-  }
+.vertical-line {
+  transform: rotate(90deg);
+  width: 1rem;
+  height: 1px;
+  margin-top: 0.9rem;
+  margin-left: 0.3rem;
+  background-color: rgb(230, 222, 222);
+}
 
-  .moon {
-    width: 1rem;
-  }
+.moon {
+  width: 1rem;
+}
 
-  .main-input {
-    padding: 0.5rem;
-    outline: none;
-    border: none;
-    background-color: rgb(236, 236, 236);
-    border-radius: 10px;
-  }
+.main-input {
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  background-color: rgb(236, 236, 236);
+  border-radius: 10px;
+}
 
-  /* Hide default HTML checkbox */
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  /* The slider */
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #2b2828;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 14px;
-    width: 14px;
-    left: 1px;
-    bottom: 1px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #a445ed;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #a445ed;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(16px);
-    -ms-transform: translateX(16px);
-    transform: translateX(16px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 10px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
 
-  #font-dropdown {
-    padding: 0.2rem 0;
-    width: 3.5rem;
-    outline: none;
-    border: none;
-  }
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2b2828;
+  transition: 0.4s;
+}
 
-  #font-dropdown option {
-    padding: 1rem;
-  } 
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 1px;
+  bottom: 1px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #a445ed;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #a445ed;
+}
+
+input:checked + .slider:before {
+  transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 10px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#font-dropdown {
+  padding: 0.2rem 0;
+  width: 3.5rem;
+  outline: none;
+  border: none;
+}
+
+#font-dropdown option {
+  padding: 1rem;
+}
 
 .header-icons {
   display: block;
@@ -206,7 +194,7 @@
 }
 
 .part-of-speech {
-  font-family: 'Inconsolata-Bold';
+  font-family: "Inconsolata-Bold";
 }
 
 .d-flex {
@@ -244,19 +232,18 @@
 }
 
 hr {
-  display:block;
-  width: 100%;               
-  background-color:rgb(200, 197, 197);
+  display: block;
+  width: 100%;
+  background-color: rgb(200, 197, 197);
   height: 0.5px;
   margin: 2rem 0 0.7rem 0;
 }
-
 
 #search-icon {
   width: 13px;
   position: absolute;
   right: 0.7rem;
-  bottom: 1.7rem;
+  bottom: 2.2rem;
   cursor: pointer;
 }
 
@@ -277,13 +264,13 @@ hr {
 
 .error-message {
   font-style: italic;
-  font-family: 'Lora-Regular';
+  font-family: "Lora-Regular";
 }
 
 .more-definitions-container {
   font-size: 0.9rem;
   display: flex;
-  font-family: 'Lora-Regular';
+  font-family: "Lora-Regular";
 }
 
 .definition-btn {
@@ -318,7 +305,6 @@ hr {
     background-color: white;
     color: black;
   }
-  
   .main-input {
     padding: 0.5rem;
     outline: none;
@@ -326,32 +312,27 @@ hr {
     background-color: rgb(236, 236, 236);
     border-radius: 10px;
   }
-
 }
-
 @media (prefers-color-scheme: dark) {
   .night-theme {
     background-color: black;
     color: white;
   }
-
   .font-dropdown-dark {
     background-color: black;
     color: white;
   }
-
   .main-input-dark {
     background-color: #2b2828;
     color: white;
   }
 }
-
 .d-none {
   display: none;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width: 768px) {
   .global-container {
     width: 95%;
-}
-}
+  }
+}/*# sourceMappingURL=style.css.map */
