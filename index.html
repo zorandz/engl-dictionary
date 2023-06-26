@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="/code/styles.css">
+  <title>Frontend Mentor | Dictionary web app</title>
+</head>
+<body id="body">
+
+  <div class="global-container" id="global-container">
+
+    <div class="input-container">
+
+      <div class="header-icons">
+
+        <div class="box-1">
+          <img src="/code/assets/images/logo.svg" alt="logo" class="logo" title="">
+        </div>
+
+        <div class="box-2">
+          <select id="font-dropdown">
+            <option>Serif</option>
+            <option>Sans Serif</option>
+            <option>Courier</option>
+          </select>
+
+          <div class="vertical-line"></div>
+
+          <label class="switch" id="switch">
+            <input type="checkbox" id="light-switch">
+            <span class="slider round"></span>
+          </label>
+
+          <img class="moon" src="/code/assets/images/icon-moon.svg" alt="moon">
+        </div>
+
+      </div>
+
+      <input type="text" placeholder="Search words" class="main-input" id="main-input">
+      <div id="empty-not-allowed">Empty input not allowed</div>
+      <img src="/code/assets/images/icon-search.svg" alt="Search" id="search-icon">
+   </div>
+
+    <div class="result-container" id="result-container">
+
+    </div>
+  </div>
+
+</body>
+
+<script src="/code/scrypt.js" defer></script>
+</html>
